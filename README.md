@@ -6,7 +6,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/TailwindCSS-3.4-38b2ac.svg)](https://tailwindcss.com/)
 [![License: Educational](https://img.shields.io/badge/License-Educational_Capston-amber.svg)](#legal-disclaimer)
 
-> **Final-Year Academic Capstone Project**: An enterprise-grade AI legal intelligence and contract risk audit platform combining multi-agent orchestration, structure-aware semantic chunking, reciprocal rank fusion (RRF) hybrid RAG, deterministic risk scoring, interactive PDF clause highlighting, and anti-hallucination verification.
+> ** Academic Capstone Project**: An enterprise-grade AI legal intelligence and contract risk audit platform combining multi-agent orchestration, structure-aware semantic chunking, reciprocal rank fusion (RRF) hybrid RAG, deterministic risk scoring, interactive PDF clause highlighting, and anti-hallucination verification.
 
 ---
 
