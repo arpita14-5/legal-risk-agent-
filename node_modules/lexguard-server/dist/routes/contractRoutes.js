@@ -1,0 +1,24 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = require("express");
+const contractController_js_1 = require("../controllers/contractController.js");
+const chatController_js_1 = require("../controllers/chatController.js");
+const authMiddleware_js_1 = require("../middleware/authMiddleware.js");
+const uploadMiddleware_js_1 = require("../middleware/uploadMiddleware.js");
+const router = (0, express_1.Router)();
+router.use(authMiddleware_js_1.authenticateJWT);
+router.post('/', uploadMiddleware_js_1.upload.single('document'), contractController_js_1.uploadContract);
+router.get('/', contractController_js_1.listContracts);
+router.get('/:id', contractController_js_1.getContract);
+router.delete('/:id', contractController_js_1.deleteContract);
+router.post('/:id/analyze', contractController_js_1.analyzeContract);
+router.get('/:id/analysis', contractController_js_1.getAnalysis);
+router.get('/:id/risks', contractController_js_1.getRisks);
+router.post('/:id/risks/:riskId/feedback', contractController_js_1.submitRiskFeedback);
+router.get('/:id/risks/feedback', contractController_js_1.getContractRiskFeedback);
+router.get('/:id/clauses', contractController_js_1.getClauses);
+router.get('/:id/report', contractController_js_1.getReport);
+// Contract Chat
+router.post('/:id/chat', chatController_js_1.sendChatMessage);
+router.get('/:id/chat', chatController_js_1.getChatHistory);
+exports.default = router;
